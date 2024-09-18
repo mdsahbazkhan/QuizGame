@@ -1,38 +1,99 @@
-.App {
+
+.mcq-game-container {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius:10px ;
+  background-image: linear-gradient(180deg, red, yellow);
+
+}
+
+.question-section,
+.score-section {
   text-align: center;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.question-count {
+  font-size: 1.2em;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.question-text {
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.answer-section {
+  margin-bottom: 20px;
+}
+
+.answer-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+  cursor: pointer;
+}
+
+.answer-button.selected {
+  background-color: #007bff;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.next-button,
+.restart-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.restart-button {
+  background-color: #28a745;
+}
+
+
+@media (max-width: 600px) {
+  .mcq-game-container {
+    padding: 10px;
+    max-width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .question-text {
+    font-size: 1.2em;
+  }
+
+  .answer-button {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+
+  .next-button,
+  .restart-button {
+    font-size: 0.9em;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .answer-button {
+    font-size: 0.8em;
+    padding: 6px;
+  }
+
+  .next-button,
+  .restart-button {
+    font-size: 0.8em;
+    padding: 6px 12px;
   }
 }
